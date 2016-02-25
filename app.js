@@ -24,7 +24,7 @@ var app = {
             // hide Exit button. Browser does not exit.
             document.getElementById('exitApp').classList.add("hidden");
         } else {
-            //app.pluginTest();
+            app.pluginTest();
         }
         app.showIt('info', 'deviceready done.');
     },
