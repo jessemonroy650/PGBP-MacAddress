@@ -1,6 +1,7 @@
 // 2016-02-25
 var app = {
     onDeviceReady : function () {
+        console.log('deviceready');
         app.showIt('info', 'deviceready');
         if (device.platform === "iOS") {
             alert("got iOS.");
@@ -26,6 +27,7 @@ var app = {
         } else {
             app.pluginTest();
         }
+        console.log('deviceready done.');
         app.showIt('info', 'deviceready done.');
     },
     showIt : function (id, msg) {
@@ -47,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // https://videlais.com/2014/08/21/lessons-learned-from-detecting-apache-cordova/
     var isCordovaApp = (typeof window.cordova !== "undefined");
 
-app.showIt('info', 'DOMContentLoaded fired');
+    console.log('DOMContentLoaded fired');
+    app.showIt('info', 'DOMContentLoaded fired');
     // Is it a device we know?
     if ( isCordovaApp === true ) {
         // Wait for PhoneGap to load
