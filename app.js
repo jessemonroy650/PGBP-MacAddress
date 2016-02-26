@@ -1,7 +1,7 @@
 var app = {
     onDeviceReady : function () {
         console.log('deviceready');
-        document.getElementById(id).innerHTML = 'deviceready';
+        document.getElementById('info').innerHTML = 'deviceready';
     }
 };
 
