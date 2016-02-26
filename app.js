@@ -31,6 +31,12 @@ var app = {
     },
     showIt : function (id, msg) {
         document.getElementById(id).innerHTML = msg;
+    },
+    pluginTest() {
+        window.MacAddress.getMacAddress(
+            function(macAddress) {app.showIt('content', macAddress);},
+            function(fail) {app.showIt('info', fail);}
+            );
     }
 };
 
