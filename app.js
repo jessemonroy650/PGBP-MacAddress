@@ -41,6 +41,7 @@ var app = {
     }
 };
 
+alert('app.js loaded');
 //
 //    Entry Point
 //
