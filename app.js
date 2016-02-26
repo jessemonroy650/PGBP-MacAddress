@@ -31,9 +31,6 @@ var app = {
     },
     showIt : function (id, msg) {
         document.getElementById(id).innerHTML = msg;
-    },
-    pluginTest() {
-        //window.MacAddress.getMacAddress();
     }
 };
 
