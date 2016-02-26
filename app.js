@@ -33,10 +33,7 @@ var app = {
         document.getElementById(id).innerHTML = msg;
     },
     pluginTest() {
-        window.MacAddress.getMacAddress(
-            function(macAddress) {app.showIt('content', macAddress);},
-            function(fail) {app.showIt('info', fail);}
-            );
+        //window.MacAddress.getMacAddress();
     }
 };
 
