@@ -31,6 +31,8 @@ var app = {
     },
     showIt : function (id, msg) {
         document.getElementById(id).innerHTML = msg;
+    },
+    testIt : function () {
     }
 };
 
