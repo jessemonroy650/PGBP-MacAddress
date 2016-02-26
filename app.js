@@ -24,7 +24,7 @@ var app = {
             // hide Exit button. Browser does not exit.
             document.getElementById('exitApp').classList.add("hidden");
         } else {
-            //app.pluginTest();
+            app.pluginTest();
         }
         //console.log('deviceready done.');
         app.showIt('info', 'deviceready done.');
@@ -33,6 +33,10 @@ var app = {
         document.getElementById(id).innerHTML = msg;
     },
     pluginTest : function () {
+        window.MacAddress.getMacAddress(
+            function(macAddress) {app.showIt('content', macAddress);},
+            function(fail) {app.showIt('info', fail);}
+            );
     }
 };
 
