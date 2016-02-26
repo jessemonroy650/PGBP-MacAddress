@@ -1,6 +1,3 @@
-/*
-    2016-02-25
-*/
 var app = {
     onDeviceReady : function () {
         console.log('deviceready');
