@@ -35,4 +35,23 @@ var app = {
 };
 
 alert('app.js loaded');
-document.addEventListener("deviceready", app.onDeviceReady, false);
+//document.addEventListener("deviceready", app.onDeviceReady, false);
+//
+//    Entry Point
+//
+document.addEventListener('DOMContentLoaded', function() {
+    // Detect if we are using Cordova/Phonegap or a browser.
+    // https://videlais.com/2014/08/21/lessons-learned-from-detecting-apache-cordova/
+    var isCordovaApp = (typeof window.cordova !== "undefined");
+
+    // Is it a device we know?
+    if ( isCordovaApp === true ) {
+        // Wait for PhoneGap to load
+        document.addEventListener("deviceready", app.onDeviceReady, false);
+    } else {
+        // This needs to be global so other modules can see it.
+        device = {platform:'browser'};
+        // Force the function.
+        app.onDeviceReady();
+    }
+});
